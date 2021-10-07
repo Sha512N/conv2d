@@ -1,8 +1,3 @@
-import math
-
-def get_center(x):
-  return math.floor(float(x) / 2)
-  
 def conv2d (matrix, kernel, padding=0, strides=1):
   h = len(matrix)
   w = len(matrix[0])
@@ -12,9 +7,6 @@ def conv2d (matrix, kernel, padding=0, strides=1):
 
   h_output = int((h - h_kernel + 2 * padding) / strides + 1)
   w_output = int((w - w_kernel + 2 * padding) / strides + 1)
-
-  h_kernel_center = get_center(h_kernel)
-  w_kernel_center = get_center(w_kernel)
 
   matrix_padded = []
 
